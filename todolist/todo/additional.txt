@@ -1,0 +1,44 @@
+# def signupuser(request):
+#     if request.method == 'GET':
+#         return render(request,'todo/signupuser.html',{'form':UserCreationForm()})
+#     else:
+#         #Create a new user
+#         if request.POST['password1'] == request.POST['password2']:
+#             try:
+#                 user=User.objects.create_user(username=request.POST['username'],password=request.POST['password1'])
+#                 user.save()
+#                 login(request,user)
+#                 return redirect('currenttodo')
+#             except IntegrityError:
+#                 return render(request,'todo/signupuser.html',{'form':UserCreationForm(),"error":"User Name Taken Already."})
+#             except Exception as e:
+#                 return render(request,'todo/signupuser.html',{'form':UserCreationForm(),"error":e})
+#         else:
+#             #password did not match
+#             return render(request,'todo/signupuser.html',{'form':UserCreationForm(),"error":"Password did not match"})
+
+
+
+{% if user.is_authenticated %}
+
+Logged in as {{user.username}}
+
+<a href="{% url 'createtodo' %}">Create</a>
+<a href="{% url 'currenttodo' %}">Current</a>
+<a href="{% url 'completedtodo' %}">Completed</a>
+
+<form method="POST" action="{% url 'logoutuser' %}">
+    {%csrf_token %}
+    <input type="submit" value="Logout"/>
+</form>
+
+{% else %}
+
+<a href="{% url 'signupuser' %}">Signup</a>
+<a href="{% url 'loginuser' %}">LogIn</a>
+
+
+{% endif %}
+
+
+{% block content %} {% endblock %}

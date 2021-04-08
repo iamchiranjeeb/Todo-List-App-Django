@@ -1,0 +1,25 @@
+{% extends "todo/base.html"%}
+
+    {% block content %}
+     <div class="alert alert-danger" role="alert">
+         {{error}}
+     </div>
+    <div class="form">
+        <h2>LogIn</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <!-- {{form.as_p}} -->
+
+                <label for="username">Username</label><br>
+                <input type="text" name="username"  id="username" autocomplete="off" placeholder="Enter Username"/><br><br>
+
+
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password" placeholder="Enter Password"/><br><br>
+
+                <input type="submit" value="Login" /><br><br>
+                Need an account? <a href="{% url 'signupuser' %}" class="signlog">Sign Up here</a>
+        </form>
+    </div>
+    {% endblock %}
+

@@ -1,0 +1,140 @@
+body {
+  padding-left: 0px;
+}
+
+
+.form{
+  position: relative;
+  padding-left: 36%;
+  padding-top: 13%;
+
+}
+
+
+.form2{
+  position: relative;
+  padding-left: 33%;
+  padding-top: 10%;
+
+}
+
+
+input{
+  border-radius: 20px;
+  transition-duration: 0.4s;
+
+}
+
+input[type=text]{
+  background-color: #FAEBD7;
+  border: 2px solid #800000;
+  width: 42%;
+}
+
+input[type=password]{
+  background-color: #FAEBD7;
+  border: 2px solid #800000;
+  width: 42%;
+}
+
+input[type=text]:hover{
+  background-color: #800000;
+  font-size: 20px; /* Green */
+  color: white;
+}
+
+input[type=password]:hover{
+  background-color: #800000;
+  font-size: 20px; /* Green */
+  color: white;
+}
+
+input[type=submit]:hover{
+  background-color: #800000;
+  font-size: 29px; 
+  color: white;
+}
+
+textarea{
+  transition-duration: 0.6s;
+}
+
+
+textarea:hover{
+  background-color: #800000;
+  color: white;
+}
+
+#title{
+  width: 50%;
+}
+
+
+
+input[type=submit]{
+  background-color: ivory;
+  width: 42%;
+  color: black;
+  border: 2px solid #800000;
+  transition-duration: 0.4s;
+}
+
+
+.logoutbutton{
+  position:relative;  top:28%;
+  width:20%;
+}
+
+.logintext{
+  padding-left: 37%;
+  font-size: 70px;
+}
+
+.logednm{
+  font-style: oblique;
+  color: ivory;
+}
+
+.signlog{
+  color: #800000;
+}
+.error{
+  color: red;
+  text-align: center;
+  font-size: 30px; 
+}
+
+.error2{
+  color: red;
+  padding-left: 0%;
+  font-size: 30px; 
+}
+
+
+
+.topnav {
+  background-color: #800000;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #FF4500;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
